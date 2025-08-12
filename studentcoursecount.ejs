@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course-wise Student Count</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        #tri {
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <%- include('nav.ejs') %>
+
+    <div class="container">
+       
+
+        <!-- Dropdown Form to select course -->
+        <form action="/studcount" method="POST" >
+            <div class="form-group row">
+                <label for="course" class="mr-5 ml-5">Select Course:</label>
+
+                <!-- <label for="course"  >Select Course:</label > -->
+                <div>
+                    <select name="name" id="course" class="form-control" required>
+                        <% data1.forEach((item) => { %>
+                            <option value="<%= item.name %>"><%= item.name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary ml-5 mr-5 mb-2 " >Get Student Count</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Display course-wise student count -->
+        <table class="table table-bordered  text-center bg-white">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Course Name</th>
+                    <th>Student Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (data.length === 0) { %>
+                    <tr id="tri"><td colspan="3"><h5>No data available</h5></td></tr>
+                <% } else { %>
+                    <% data.forEach((item, index) => { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= item.course_name %></td>
+                            <td><%= item.student_count %></td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

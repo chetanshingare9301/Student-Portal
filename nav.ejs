@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+     
+      background-image:url("/public/back.jpg");
+      background-size:cover;
+      background-repeat: no-repeat;
+      
+
+      font-size: 1.5em;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 15px;
+      background-color: black;
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      align-items: center;
+    }
+
+    ul.main > li {
+      display: inline-block;
+      position: relative;
+      padding: 15px 20px;
+      margin: auto;
+    }
+
+    ul.main > li > a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    /* Dropdown hidden initially */
+    ul.main li ul {
+      display: none;
+      position: absolute;
+      background-color:lightblue;
+      min-width: 180px; /* Ensures better dropdown width */
+      top: 100%;
+      left: 0;
+      z-index: 1;
+    }
+
+    /* Show dropdown on hover */
+    ul.main li:hover ul {
+      display: block;
+    }
+
+    /* Style the dropdown items */
+    ul.main li ul li {
+      display: block;
+      padding: 10px;
+    }
+
+    ul.main li ul li a {
+      color: black;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    /* Hover effect for dropdown items */
+    ul.main li ul li a:hover {
+      background-color: #ddd;
+    }
+
+    /* Responsive Styling: Collapse menu on small screens */
+    @media (max-width: 768px) {
+      ul.main > li {
+        display: block;
+        text-align: left;
+      }
+
+      ul.main li ul {
+        position: static;
+      }
+
+      ul.main li:hover ul {
+        display: none;
+      }
+
+      /* Add toggleable dropdown for mobile */
+      ul.main li.active ul {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <ul class="main">
+    <li class="logo-item" style="display: inline-block;
+  padding: 0 15px;
+  vertical-align: middle;">
+    <img src="/public/flogo.jpg" alt="logo" class="logo">
+    <!-- <h1>CourseConnect </h1> -->
+     <h1 style="font-size: 20px; font-weight: bold; background: linear-gradient(to right, #00b4db, #ff416c); -webkit-background-clip: text; color: transparent; text-align: center; margin-top: 10px;">
+  CourseConnect
+</h1>
+
+
+  </li>
+    <li><a href="#">Course Master <span class="arrow">▼</span> </a>
+      <ul>
+        <li><a href='/newcourse'>Add Course</a></li>
+        <li><a href='/viewcourse'>View Course</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Student Master <span class="arrow">▼</span></a>
+      <ul>
+        <li><a href='/newstudent'>Add Student</a></li>
+        <li><a href='/viewstudent'>View Student</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Reports <span class="arrow">▼</span></a>
+    <ul>
+      <li><a href='/coursewise'>Student List</a></li>
+      <li><a href='/studentcoursecount'>Student Count</a></li>
+    </ul>
+  </li>
+  </ul>
+
+  <script>
+    // JavaScript to toggle dropdown on mobile
+    document.querySelectorAll('ul.main > li').forEach(item => {
+      item.addEventListener('click', () => {
+        // Toggle active class on click for mobile menu
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
