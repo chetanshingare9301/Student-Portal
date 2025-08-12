@@ -1,3 +1,9 @@
+<img width="1841" height="777" alt="4" src="https://github.com/user-attachments/assets/886d5d37-e543-447e-9f4b-0643d86b4828" />
+<img width="1913" height="795" alt="3" src="https://github.com/user-attachments/assets/1c6ae932-f5c6-4bbc-a413-930dbe16d16f" />
+<img width="1860" height="786" alt="2" src="https://github.com/user-attachments/assets/510344c0-1df6-4b52-ab0e-6011e6352675" />
+<img width="1846" height="737" alt="1" src="https://github.com/user-attachments/assets/02876c15-98f8-49ee-9261-7647c0f30bec" />
+
+
 🧑‍💻 Student Course Management Web App
 This is a Student-Course Management web application built using Node.js, Express.js, HTML, CSS, JavaScript, and Bootstrap. The app allows managing students and their course information dynamically via a web interface.
 
@@ -42,10 +48,7 @@ http://localhost:3000
 🧑‍🎓 Author
 Chetan Shingare
 
-<img width="1841" height="777" alt="4" src="https://github.com/user-attachments/assets/886d5d37-e543-447e-9f4b-0643d86b4828" />
-<img width="1913" height="795" alt="3" src="https://github.com/user-attachments/assets/1c6ae932-f5c6-4bbc-a413-930dbe16d16f" />
-<img width="1860" height="786" alt="2" src="https://github.com/user-attachments/assets/510344c0-1df6-4b52-ab0e-6011e6352675" />
-<img width="1846" height="737" alt="1" src="https://github.com/user-attachments/assets/02876c15-98f8-49ee-9261-7647c0f30bec" />
+
 
 
 📜 License
